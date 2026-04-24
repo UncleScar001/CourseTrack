@@ -1,0 +1,317 @@
+
+    /* --- Modern Auth Reset & Base --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f0f3f8 0%, #7fb5eb 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #1e1e2f;
+    }
+
+    /* --- Auth Container --- */
+    .auth-container {
+      width: 100%;
+      max-width: 460px;
+    }
+
+    /* --- Brand Header --- */
+    .brand {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .brand h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand h1::before {
+      content: "⌛";
+      font-size: 40px;
+    }
+
+    .brand p {
+      color: #7a7f8c;
+      font-size: 15px;
+      margin-top: 8px;
+      font-weight: 400;
+    }
+
+    /* --- Auth Card --- */
+    .auth-card {
+      background: white;
+      border-radius: 32px;
+      padding: 40px;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08), 
+                  0 8px 20px -6px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(237, 240, 243, 0.8);
+    }
+
+    /* --- Tabs (Sign In / Sign Up) --- */
+    .auth-tabs {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 36px;
+      border-bottom: 1.5px solid #eff1f4;
+      padding-bottom: 14px;
+    }
+
+    .auth-tab {
+      font-size: 18px;
+      font-weight: 500;
+      color: #7a7f8c;
+      cursor: pointer;
+      transition: color 0.2s;
+      padding-bottom: 14px;
+      margin-bottom: -16px;
+      border-bottom: 3px solid transparent;
+    }
+
+    .auth-tab.active {
+      color: #1e1e2f;
+      font-weight: 600;
+      border-bottom: 3px solid #1e1e2f;
+    }
+
+    /* --- Forms --- */
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #5a5f6e;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 16px;
+      color: #a0a5b5;
+      font-size: 18px;
+    }
+
+    .auth-input {
+      width: 100%;
+      padding: 16px 16px 16px 48px;
+      background: #fafbfc;
+      border: 1.5px solid #edf0f3;
+      border-radius: 18px;
+      font-size: 15px;
+      color: #1e1e2f;
+      transition: all 0.2s;
+      outline: none;
+    }
+
+    .auth-input:focus {
+      border-color: #1e1e2f;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .auth-input::placeholder {
+      color: #b0b5c2;
+      font-weight: 400;
+    }
+
+    /* --- Password Visibility Toggle --- */
+    .password-toggle {
+      position: absolute;
+      right: 16px;
+      color: #a0a5b5;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+    }
+
+    /* --- Form Options (Remember / Forgot) --- */
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #5a5f6e;
+      cursor: pointer;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #1e1e2f;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .forgot-link {
+      font-size: 14px;
+      color: #7a7f8c;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .forgot-link:hover {
+      color: #1e1e2f;
+    }
+
+    /* --- Primary Button (Matches Dashboard Alert Theme) --- */
+    .auth-button {
+      background: #1e1e2f;
+      color: white;
+      border: none;
+      padding: 16px 24px;
+      border-radius: 18px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .auth-button:hover {
+      background: #2d2d42;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -8px rgba(30, 30, 47, 0.25);
+    }
+
+    /* --- Divider --- */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 28px 0 20px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: #eff1f4;
+    }
+
+    .divider-text {
+      color: #a0a5b5;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    /* --- Social Login (Subtle but cohesive) --- */
+    .social-login {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-button {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: white;
+      border: 1.5px solid #edf0f3;
+      border-radius: 18px;
+      padding: 14px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5a5f6e;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .social-button:hover {
+      background: #fafbfc;
+      border-color: #d0d5dd;
+    }
+
+    /* --- Footer Text --- */
+    .auth-footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 14px;
+      color: #7a7f8c;
+    }
+
+    .auth-footer a {
+      color: #1e1e2f;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 4px;
+    }
+
+    .auth-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Error / Success Message Styling (Matches Status Alerts) --- */
+    .auth-message {
+      background: #fafbfc;
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      border-left: 4px solid #1e1e2f;
+    }
+
+    /* --- Hidden Utility --- */
+    .hidden-form {
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .auth-card {
+        padding: 28px 20px;
+      }
+      
+      .brand h1 {
+        font-size: 30px;
+      }
+      
+      .social-login {
+        flex-direction: column;
+      }
+    }
+  
