@@ -1,1 +1,201 @@
-<!-- Dashboard page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos - Workspace</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <!-- Logo -->
+            <div class="sidebar-logo">
+                <div class="logo-icon">⊞</div>
+                <span class="logo-text">Chronos</span>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">📚</span>
+                            <span class="nav-text">All Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">📅</span>
+                            <span class="nav-text">Upcoming</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">⏳</span>
+                            <span class="nav-text">Ongoing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">✓</span>
+                            <span class="nav-text">Completed</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Status Alerts Section -->
+            <div class="status-alerts">
+                <h3 class="alerts-title">STATUS ALERTS</h3>
+                <div class="alerts-list">
+                    <div class="alert-item">
+                        <span class="alert-dot"></span>
+                        <span class="alert-text">COURSE START TODAY: ADVANCED TYPESCRIPT</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <header class="workspace-header">
+                <div class="header-content">
+                    <h1 class="header-title">Workspace</h1>
+                    <p class="header-subtitle">Manage your learning journey and event schedule.</p>
+                </div>
+                <button class="btn-new-course">
+                    <span class="btn-icon">+</span>
+                    <span class="btn-text">New Course</span>
+                </button>
+            </header>
+
+            <!-- Statistics Cards -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <p class="stat-label">TOTAL COURSES</p>
+                    <p class="stat-number">03</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">ONGOING NOW</p>
+                    <p class="stat-number">02</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">COMPLETED</p>
+                    <p class="stat-number">00</p>
+                </div>
+            </section>
+
+            <!-- Filter and Search Section -->
+            <section class="filter-section">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search courses...">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">ALL</button>
+                    <button class="filter-btn">UPCOMING</button>
+                    <button class="filter-btn">ONGOING</button>
+                    <button class="filter-btn">COMPLETED</button>
+                </div>
+            </section>
+
+            <!-- Courses List -->
+            <section class="courses-section">
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">Advanced TypeScript</h3>
+                        <span class="course-badge upcoming">Upcoming</span>
+                    </div>
+                    <div class="course-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Start Date:</span>
+                            <span class="detail-value">Jun 5, 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">4 weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Participants:</span>
+                            <span class="detail-value">45 students</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-position">1 of 3</span>
+                        <div class="course-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                            <button class="action-btn report">Report</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">React Fundamentals</h3>
+                        <span class="course-badge ongoing">Ongoing</span>
+                    </div>
+                    <div class="course-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Start Date:</span>
+                            <span class="detail-value">Apr 1, 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">6 weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Participants:</span>
+                            <span class="detail-value">32 students</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-position">2 of 3</span>
+                        <div class="course-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                            <button class="action-btn report">Report</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">Web Design Basics</h3>
+                        <span class="course-badge completed">Completed</span>
+                    </div>
+                    <div class="course-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Start Date:</span>
+                            <span class="detail-value">Feb 10, 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">4 weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Participants:</span>
+                            <span class="detail-value">28 students</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-position">3 of 3</span>
+                        <div class="course-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                            <button class="action-btn report">Report</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
