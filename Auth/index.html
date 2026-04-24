@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CourseTrack</title>
+    <link rel="stylesheet" href="styleSheet.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+<div class="auth-container">
+  
+  <!-- Brand -->
+  <div class="brand">
+    <h1>CourseTrack</h1>
+    <p>Manage your learning journey and event schedule</p>
+  </div>
+
+  <!-- Auth Card -->
+  <div class="auth-card">
     
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <div class="auth-tab active" id="signinTab">Sign In</div>
+      <div class="auth-tab" id="signupTab">Sign Up</div>
+    </div>
+
+    <!-- Sign In Form -->
+    <form class="auth-form" id="signinForm">
+      <div class="form-group">
+        <label>Email address</label>
+        <div class="input-wrapper">
+          <span class="input-icon">✉️</span>
+          <input type="email" class="auth-input" placeholder="alex@example.com" value="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <div class="input-wrapper">
+          <span class="input-icon">🔒</span>
+          <input type="password" class="auth-input" id="signinPassword" placeholder="••••••••" value="">
+          <span class="password-toggle" onclick="togglePassword('signinPassword', this)">👁️</span>
+        </div>
+      </div>
+
+      <div class="form-options">
+        <label class="checkbox-label">
+          <input type="checkbox" checked> Keep me signed in
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button type="button" class="auth-button" onclick="handleSignIn()">
+        Sign In <span style="font-size: 18px;">→</span>
+      </button>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-text">Or continue with</div>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="social-login">
+        <div class="social-button">🅶 Google</div>
+        <div class="social-button"> Apple</div>
+        <div class="social-button">🅶 GitHub</div>
+      </div>
+    </form>
+
+    <!-- Sign Up Form (Hidden by default) -->
+    <form class="auth-form hidden-form" id="signupForm">
+      <div class="form-group">
+        <label>Full name</label>
+        <div class="input-wrapper">
+          <span class="input-icon">👤</span>
+          <input type="text" class="auth-input" placeholder="Alex Rivera">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email address</label>
+        <div class="input-wrapper">
+          <span class="input-icon">✉️</span>
+          <input type="email" class="auth-input" placeholder="alex@example.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <div class="input-wrapper">
+          <span class="input-icon">🔒</span>
+          <input type="password" class="auth-input" id="signupPassword" placeholder="Create a password">
+          <span class="password-toggle" onclick="togglePassword('signupPassword', this)">👁️</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Confirm password</label>
+        <div class="input-wrapper">
+          <span class="input-icon">🔒</span>
+          <input type="password" class="auth-input" id="signupConfirm" placeholder="Confirm password">
+          <span class="password-toggle" onclick="togglePassword('signupConfirm', this)">👁️</span>
+        </div>
+      </div>
+
+      <div class="form-options">
+        <label class="checkbox-label">
+          <input type="checkbox" checked> I agree to the 
+        </label>
+        <a href="#" class="forgot-link">Terms & Privacy</a>
+      </div>
+
+      <button type="button" class="auth-button" onclick="handleSignUp()">
+        Create Account <span style="font-size: 18px;">✨</span>
+      </button>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-text">Or sign up with</div>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="social-login">
+        <div class="social-button">🅶 Google</div>
+        <div class="social-button"> Apple</div>
+        <div class="social-button">🅶 GitHub</div>
+      </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="auth-footer" id="footerText">
+      Don't have an account? <a href="#" id="footerActionLink">Sign up for free</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
