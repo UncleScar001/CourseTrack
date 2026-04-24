@@ -1,1 +1,150 @@
-<!-- Frontend index -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseTrack - Course Management System</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .landing-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--color-bg-sidebar) 0%, #1a3a52 100%);
+            color: var(--color-text-inverse);
+            padding: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .landing-content {
+            max-width: 600px;
+        }
+
+        .landing-logo {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .landing-title {
+            font-size: 3rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .landing-subtitle {
+            font-size: var(--font-size-lg);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--spacing-2xl);
+            line-height: var(--line-height-relaxed);
+        }
+
+        .landing-buttons {
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-landing {
+            padding: var(--spacing-md) var(--spacing-2xl);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            text-decoration: none;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        .btn-landing.primary {
+            background-color: var(--color-secondary);
+            color: var(--color-text-inverse);
+        }
+
+        .btn-landing.primary:hover {
+            background-color: #0770c9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(9, 132, 227, 0.3);
+        }
+
+        .btn-landing.secondary {
+            background-color: transparent;
+            color: var(--color-text-inverse);
+            border: 2px solid var(--color-text-inverse);
+        }
+
+        .btn-landing.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .landing-features {
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-2xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .feature {
+            padding: var(--spacing-lg);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .feature-title {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-description {
+            font-size: var(--font-size-sm);
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <div class="landing-content">
+            <div class="landing-logo">📚</div>
+            <h1 class="landing-title">CourseTrack</h1>
+            <p class="landing-subtitle">
+                Manage your courses efficiently with automatic status tracking, progress monitoring, and comprehensive reporting.
+            </p>
+
+            <div class="landing-buttons">
+                <a href="pages/dashboard.html" class="btn-landing primary">Go to Dashboard</a>
+                <a href="pages/login.html" class="btn-landing secondary">Sign In</a>
+            </div>
+
+            <div class="landing-features">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-title">Automatic Status</div>
+                    <div class="feature-description">Courses automatically update from Upcoming to Ongoing to Completed</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Search & Filter</div>
+                    <div class="feature-description">Easily find courses by status, name, or code</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Reports</div>
+                    <div class="feature-description">Print or download course reports for offline access</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
